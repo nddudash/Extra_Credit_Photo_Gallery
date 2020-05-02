@@ -1,0 +1,81 @@
+/*Mobile = 320 - 425
+Tablet = 425 - 1024
+Desktop = >1024*/
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 680px) {
+    .PageWrapper {
+        display: flex;
+        flex-flow: column wrap;
+        flex: 1 1 500px;
+        min-width: 250px;
+    }
+
+    .HeadingBox {
+        flex: 1 1 175px;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .GalleryBox {
+        column-count: 2;
+        flex: 1 1 100%;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .GalleryBox .GalleryColumn {
+        flex: 0 1 245px;
+        max-width: 245px;
+        flex-flow: column nowrap;
+        padding: 0px;
+        margin: 0px 0px;
+    }
+}
+
+@media (min-width: 681px) {
+    .PageWrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        flex: 1 1 1000px;
+        max-width: 2000px;
+        min-width: 500px;
+    }
+
+    .HeadingBox {
+        flex: 1 1 300px;
+        max-width: 350px;
+        height: 100%;
+        margin: 0px 15px 0px 5px;
+    }
+
+    .GalleryBox {
+        flex: 2 1 1000px;
+        flex-flow: column wrap;
+        min-width: 500px;
+        justify-content: flex-start;
+        align-items: center;
+        column-count: auto;
+        column-width: 245px;
+    }
+}
+
+.HeadingBox {
+    border: 5px solid rgba(70, 70, 70, .7);
+    padding: 15px;
+}
+
+.HeadingBox h1{
+    text-align: center
+}
+
+.GalleryBox {
+    border: 5px solid rgba(70, 70, 70, .3);
+}
+
+.GalleryBox .GalleryImage{
+    align-self: center;
+    margin: 4px 2px;
+}
